@@ -1,3 +1,12 @@
+// <editor-fold desc="-- Module Definition --">
+if (typeof module === 'object' && typeof define !== 'function') {
+	var define = function (factory) {
+		module.exports = factory(require, exports, module);
+	};
+}
+
+define(function (require, exports, module) {
+// </editor-fold>
 var traverse = module.exports = function (obj) {
     return new Traverse(obj);
 };
@@ -312,3 +321,4 @@ forEach(objectKeys(Traverse.prototype), function (key) {
 var hasOwnProperty = Object.hasOwnProperty || function (obj, key) {
     return key in obj;
 };
+});
